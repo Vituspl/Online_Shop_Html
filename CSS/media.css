@@ -1,0 +1,134 @@
+@media (max-width: 1200px) {
+    .banner-section__slider-img {
+        min-height: 400px;
+        max-width: 600px;
+    }
+
+    .banner-section__inner {
+        justify-content: space-around;
+
+    }
+
+    .banner-section__slider {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .menu__item + .menu__item {
+        padding-left: 10px;
+    }
+
+    .header__address {
+        width: 350px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 968px) {
+    .header__bottom {
+        display: none;
+    }
+
+    .menu__list {
+        display: none;
+    }
+
+    /* Кнопка меню три полоски (сэндвич) в
+   деск-топ версии не показывается, но
+   должно появляться в мобильной версии */
+    .menu__btn {
+        display: block;
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        padding: 0;
+    }
+
+    .menu__btn-line {
+        background: #2F3035;
+        border-radius: 3px;
+        height: 3px;
+        width: 34px;
+        margin: 8px 0;
+    }
+
+    /* Нижний мобильный хедер появляется при ширине экрана 968px */
+    .menu__mobile-linewrapper {
+        display: block;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        font-family: 'SFProDisplay-Bold', sans-serif;
+        background: #F0F0F4;
+        overflow-x: scroll;
+    }
+
+    .menu__mobile-line {
+        padding: 14px 0 14px 15px;
+        width: 500px;
+    }
+
+    .banner-section__inner {
+        margin-top: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .banner-section__slider-item{
+        text-align: center;
+    }
+
+    .banner-section__slider {
+        max-width: 100%;
+    }
+
+    .banner-section__slider-img {
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
+    .mobile-overflow{
+        width: 1000px;
+    }
+    .tabs-wrapper{
+        overflow-x: scroll;
+    }
+}
+
+@media (max-width: 640px) {
+    .header__address {
+        display: none;
+    }
+    .banner-section__slider-img{
+        min-height: 200px;
+    }
+    .banner-section .container{
+        padding: 0;
+    }
+    .search__content-btn{
+        font-size: 0;
+        line-height: 0;
+        background-image: url('../images/search.svg');
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        padding: 17px;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 3px;
+        top: 15px;
+    }
+    .search__content-input{
+        height: 50px;
+        padding-right: 50px;
+    }
+    .search__content-form{
+        position: relative;
+    }
+}
+
+@media(max-width: 440px){
+    .banner-section__slider-img{
+        min-height: 164px;
+    }
+}

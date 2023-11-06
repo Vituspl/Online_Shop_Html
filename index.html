@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/slick.css">
+    <link rel="stylesheet" href="CSS/fonts.css">
+    <link rel="stylesheet" href="CSS/ion.rangeSlider.min.css">
+    <link rel="stylesheet" href="CSS/jquery.formstyler.css">
+    <link rel="stylesheet" href="CSS/jquery.formstyler.theme.css">
+    <link rel="stylesheet" href="CSS/jquery.rateyo.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- F media.css всегда ставится в конце, т.к. он может перебивать наши стили -->
+    <link rel="stylesheet" href="CSS/media.css">
+</head>
+<body>
+<!-- Шапка  сайта. Хедер -->
+<header class="header">
+    <!-- Верхний  Хедер -->
+    <div class="header__top">
+        <div class="container">
+            <div class="header__top-inner">
+                <nav class="menu">
+                    <!--Делаем кнопку меню сэндвич из трех полосок -->
+                    <div class="menu__btn">
+                        <div class="menu__btn-line"></div>
+                        <div class="menu__btn-line"></div>
+                        <div class="menu__btn-line"></div>
+                    </div>
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Магазины
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Акции
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Доставка и оплата
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Вставили логотип -->
+                <a class="logo" href="#">
+                    <!-- Отрегулируем размер логотипа width="70px" height="100px" -->
+                    <img class="logo__img" src="images/logo.svg" width="70px" height="100px" alt="">
+                </a>
+                <!-- Блок с Адресом и списком Избранное, Личный кабинет, Корзина -->
+                <div class="header__box">
+                    <p class="header__address">
+                        Москва, <br> ул. Самая Главная 88
+                    </p>
+                    <ul class="user-list">
+                        <li class="user-list__item">
+                            <a class="user-list__link" href="#">
+                                <!-- У меня иконки имеют размер 200х200px пропишем размеры width="20px" height="20px" -->
+                                <img src="images/love_included_off.svg" width="20px" height="20px" alt="">
+                            </a>
+                        </li>
+                        <li class="user-list__item">
+                            <a class="user-list__link" href="#">
+                                <img src="images/profile_cabinet.svg" width="20px" height="20px" alt="">
+                            </a>
+                        </li>
+                        <li class="user-list__item">
+                            <!-- к классу иконок user-list__link добавляем класс cart для количества товаров в корзине -->
+                            <a class="user-list__link cart" href="#">
+                                <img src="images/cart_empty.svg" width="20px" height="20px" alt="">
+                                <!-- Добавляем иконку для количества товаров в корзине.
+                                     Добавили cart__num именно в файле html а не в css (так удобнее для бекэнда)-->
+                                <p class="cart__num">88</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul class="menu-mobile__list">
+        <li class="menu-mobile__item">
+            <a class="menu-mobile__link" href="#">
+                <img class="menu-mobile__img" src="images/profile_cabinet.svg" width="20px" height="20px" alt="">
+                <p>Войти</p>
+            </a>
+        </li>
+        <li class="menu-mobile__item">
+            <a class="menu-mobile__link" href="#">
+                <img class="menu-mobile__img" src="images/profile_cabinet.svg" width="20px" height="20px" alt="">
+                <p>Регистрация</p>
+            </a>
+        </li>
+        <li class="menu-mobile__item">
+            <a class="menu-mobile__link" href="#">
+                <img class="menu-mobile__img" src="images/love_included_off.svg" width="20px" height="20px" alt="">
+                <p>Избранное</p>
+            </a>
+        </li>
+        <li class="menu-mobile__item">
+            <a class="menu-mobile__link" href="#">
+                <img class="menu-mobile__img" src="images/cart_empty.svg" width="20px" height="20px" alt="">
+                <p>Корзина</p>
+            </a>
+        </li>
+        <li class="menu-mobile__item">
+            <a class="menu-mobile__link" href="#">
+                <img class="menu-mobile__img" src="images/home-20.svg" alt="">
+                <p>Магазины</p>
+            </a>
+        </li>
+        <li class="menu-mobile__item">
+            <a class="menu-mobile__link" href="#">
+                <img class="menu-mobile__img" src="images/procent-20.png" alt="">
+                <p>Акции</p>
+            </a>
+        </li>
+        <li class="menu-mobile__item">
+            <a class="menu-mobile__link" href="#">
+                <img class="menu-mobile__img" src="images/delivery-20.png" alt="">
+                <p>Доставка и оплата</p>
+            </a>
+        </li>
+        <li class="menu-mobile__item">
+            <a class="menu-mobile__link" href="#">
+                <p>Квадроциклы</p>
+            </a>
+        </li>
+        <li class="menu-mobile__item">
+            <a class="menu-mobile__link" href="#">
+                <p>Катера</p>
+            </a>
+        </li>
+        <li class="menu-mobile__item">
+            <a class="menu-mobile__link" href="#">
+                <p>Гидроциклы</p>
+            </a>
+        </li>
+        <li class="menu-mobile__item">
+            <a class="menu-mobile__link" href="#">
+                <p>Лодки</p>
+            </a>
+        </li>
+        <li class="menu-mobile__item">
+            <a class="menu-mobile__link" href="#">
+                <p>Вездеходы</p>
+            </a>
+        </li>
+        <li class="menu-mobile__item">
+            <a class="menu-mobile__link" href="#">
+                <p>Снегоходы</p>
+            </a>
+        </li>
+        <li class="menu-mobile__item">
+            <a class="menu-mobile__link" href="#">
+                <p>Двигатели</p>
+            </a>
+        </li>
+        <li class="menu-mobile__item">
+            <a class="menu-mobile__link" href="#">
+                <p>Запчасти</p>
+            </a>
+        </li>
+    </ul>
+
+    <!-- Для мобильной версии делаем нижний хедер -->
+    <div class="menu__mobile-linewrapper">
+        <ul class="menu__mobile-line">
+            <li class="menu__item">
+                <a class="menu__link" href="#">
+                    Магазины
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#">
+                    Акции
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#">
+                    Доставка и оплата
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Нижний хедер -->
+    <div class="header__bottom">
+        <div class="container">
+            <!-- Обертка для нижних 8 менюшек категорий товаров -->
+            <!-- Див с class="header__top-inner" не нужен
+               (полезной нагрузки не несет) удаляем в html
+                остается class="menu-categories" -->
+            <ul class="menu-categories">
+                <li class="menu-categories__item">
+                    <a class="menu-categories__link" href="#">Квадроциклы</a>
+                </li>
+                <li class="menu-categories__item">
+                    <a class="menu-categories__link" href="#">Катера</a>
+                </li>
+                <li class="menu-categories__item">
+                    <a class="menu-categories__link" href="#">Гидроциклы</a>
+                </li>
+                <li class="menu-categories__item">
+                    <a class="menu-categories__link" href="#">Лодки</a>
+                </li>
+                <li class="menu-categories__item">
+                    <a class="menu-categories__link" href="#">Вездеходы</a>
+                </li>
+                <li class="menu-categories__item">
+                    <a class="menu-categories__link" href="#">Снегоходы</a>
+                </li>
+                <li class="menu-categories__item">
+                    <a class="menu-categories__link" href="#">Двигатели</a>
+                </li>
+                <li class="menu-categories__item">
+                    <a class="menu-categories__link" href="#">Запчасти</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</header>
+
+<!-- Секция баннера и слайдера -->
+<section class="banner-section page-section">
+    <!-- Контейнер для блока баннера  -->
+    <div class="container">
+        <div class="banner-section__inner">
+            <!-- В див слайдера импортируем 6 картинок как ссылки -->
+            <div class="banner-section__slider">
+                <!-- 6 ссылок с картинками -->
+                <a class="banner-section__slider-item" href="#">
+                    <img class="banner-section__slider-img" src="images/banner/banner-slider-1.png" alt="">
+                </a>
+                <a class="banner-section__slider-item" href="#">
+                    <img class="banner-section__slider-img" src="images/banner/banner-slider-1.png" alt="">
+                </a>
+                <a class="banner-section__slider-item" href="#">
+                    <img class="banner-section__slider-img" src="images/banner/banner-slider-1.png" alt="">
+                </a>
+                <a class="banner-section__slider-item" href="#">
+                    <img class="banner-section__slider-img" src="images/banner/banner-slider-1.png" alt="">
+                </a>
+                <a class="banner-section__slider-item" href="#">
+                    <img class="banner-section__slider-img" src="images/banner/banner-slider-1.png" alt="">
+                </a>
+                <a class="banner-section__slider-item" href="#">
+                    <img class="banner-section__slider-img" src="images/banner/banner-slider-1.png" alt="">
+                </a>
+            </div>
+            <!-- баннер справа от слайдера это ссылка -->
+            <!-- У баннера будет два класса banner-section__item и sale-item -->
+            <a class="banner-section__item sale-item" href="#">
+                <div class="sale-item__top">
+                    <!-- Это будет иконка Акция -->
+                    <p class="sale-item__info">
+                        Акция
+                    </p>
+                    <!-- Это будут ценники новый и старый -->
+                    <div class="sale-item__price">
+                        <div class="price sale-item__price-new">190000</div>
+                        <div class="price sale-item__price-old">
+                            <del>226000</del>
+                        </div>
+                    </div>
+                </div>
+                <!-- Здесь будет картинка товара по Акции -->
+                <img class="sale-item__img" src="images/content/sale-1.png" alt="">
+                <!-- Здесь будет название товара по Акции -->
+                <h5 class="sale-item__title">
+                    Лодочный мотор Mercury F30 ELPT EFI HD
+                </h5>
+                <!-- Здесь будет футер с датой действия Акции -->
+                <div class="sale-item__footer">
+                    Акция действует до:
+                    <span>31.08.2020</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- После секции слайдера с баннером идет секция поиска search -->
+<section class="search page-section">
+    <!--; Создаем контейнер для секции -->
+    <div class="container">
+        <div class="search__inner">
+            <!-- Делаем табы -->
+            <div class="search__tabs tabs-wrapper">
+                <div class="mobile-overflow">
+                    <!-- Добавил еще класс search__tabs-item--active чтобы активизировать -->
+                    <!-- Потом еще добавил класс tab, чтобы оптимизировать все табы -->
+                    <!-- Заменил search__tabs-item--active на tab--active -->
+                    <a class="tab search__tabs-item tab--active" href="#tab-1">Поиск по номеру</a>
+                    <a class="tab search__tabs-item" href="#tab-2">Поиск по марке</a>
+                    <a class="tab search__tabs-item" href="#tab-3">Поиск по названию товара</a>
+                </div>
+            </div>
+            <div class="search__content">
+                <!-- Добавил еще класс search__content-item--active чтобы активизировать -->
+                <!-- Добавил еще класс tabs-content, и заменил search__content-item--active на
+                     tabs-content--active, чтобы оптимизировать все табы -->
+                <div id="tab-1" class="tabs-content search__content-item tabs-content--active">
+                    <form class="search__content-form">
+                        <input class="search__content-input" type="text" placeholder="Введите номер">
+                        <button class="search__content-btn" type="submit">искать</button>
+                    </form>
+                </div>
+                <div id="tab-2" class="tabs-content search__content-item">
+                    <form class="search__content-form">
+                        <input class="search__content-input" type="text" placeholder="Введите марку">
+                        <button class="search__content-btn" type="submit">искать</button>
+                    </form>
+                </div>
+                <div id="tab-3" class="tabs-content search__content-item">
+                    <form class="search__content-form">
+                        <input class="search__content-input" type="text" placeholder="Введите название товара">
+                        <button class="search__content-btn" type="submit">искать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--
+&lt;!&ndash; Секция категорий товаров &ndash;&gt;
+&lt;!&ndash; У секции категорий товаров будет два класса &ndash;&gt;
+<section class="categories page-section">
+    <div class="container">
+        <div class="categories__inner">
+            <a class="categories__item" href="#">
+                <div class="categories__item-info">
+                    <h4 class="categories__item-title">Квадроциклы</h4>
+                    <p class="categories__item-text">Подробнее</p>
+                </div>
+                &lt;!&ndash; Чтобы центрировать картинки в окне, обернем их div &ndash;&gt;
+                <div class="categories__item-img">
+                    <img src="images/categories-1.png" alt="">
+                </div>
+            </a>
+            <a class="categories__item" href="#">
+                <div class="categories__item-info">
+                    <h4 class="categories__item-title">Гидроциклы</h4>
+                    <p class="categories__item-text">Подробнее</p>
+                </div>
+                <div class="categories__item-img">
+                    <img src="images/categories-2.png" alt="">
+                </div>
+            </a>
+            <a class="categories__item" href="#">
+                <div class="categories__item-info">
+                    <h4 class="categories__item-title">Катера</h4>
+                    <p class="categories__item-text">Подробнее</p>
+                </div>
+                <div class="categories__item-img">
+                    <img src="images/categories-3.png" alt="">
+                </div>
+            </a>
+            <a class="categories__item" href="#">
+                <div class="categories__item-info">
+                    <h4 class="categories__item-title">Снегоходы</h4>
+                    <p class="categories__item-text">Подробнее</p>
+                </div>
+                <div class="categories__item-img">
+                    <img src="images/categories-4.png" alt="">
+                </div>
+            </a>
+            <a class="categories__item" href="#">
+                <div class="categories__item-info">
+                    <h4 class="categories__item-title">Вездеходы</h4>
+                    <p class="categories__item-text">Подробнее</p>
+                </div>
+                <div class="categories__item-img">
+                    <img src="images/categories-5.png" alt="">
+                </div>
+            </a>
+            <a class="categories__item" href="#">
+                <div class="categories__item-info">
+                    <h4 class="categories__item-title">Двигатели</h4>
+                    <p class="categories__item-text">Подробнее</p>
+                </div>
+                <div class="categories__item-img">
+                    <img src="images/categories-6.png" alt="">
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+&lt;!&ndash; Секция Сопутствующие товары &ndash;&gt;
+<section class="products page-section">
+    <div class="container">
+        <div class="products__inner">
+            <h3 class="product__title">
+                Сопутствующие товары
+            </h3>
+            &lt;!&ndash; Унифицируем все табы в проекте &ndash;&gt;
+            <div class="tabs-wrapper">
+                &lt;!&ndash; Добавим универсальные классы для табов products__tabs, products__tab,
+                     products__container, products__content, tabs-content&#45;&#45;active&ndash;&gt;
+                <div class="tabs products__tabs">
+                    <a class="tab products__tab tab&#45;&#45;active" href="#product-tab1">запчасти</a>
+                    <a class="tab products__tab" href="#product-tab2">моторы</a>
+                    <a class="tab products__tab" href="#product-tab3">шины</a>
+                    <a class="tab products__tab" href="#product-tab4">электроника</a>
+                    <a class="tab products__tab" href="#product-tab5">инструменты</a>
+                    <a class="tab products__tab" href="#product-tab6">аксессуары</a>
+                </div>
+                <div class="tabs-container products__container">
+                    &lt;!&ndash; В этих дивах будут слайдеры товаров &ndash;&gt;
+                    <div id="product-tab1" class="tabs-content products__content tabs-content&#45;&#45;active">
+                        <div class="product-slider">
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper product-item__not-available">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper product-item__not-available">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper product-item__not-available">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper product-item__not-available">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="product-tab2" class="tabs-content products__content">
+                        <div class="product-slider">
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper product-item__not-available">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper product-item__not-available">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper product-item__not-available">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper product-item__not-available">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="product-tab3" class="tabs-content products__content">slider-3</div>
+                    <div id="product-tab4" class="tabs-content products__content">slider-4</div>
+                    <div id="product-tab5" class="tabs-content products__content">slider-5</div>
+                    <div id="product-tab6" class="tabs-content products__content">slider-6</div>
+                </div>
+            </div>
+            &lt;!&ndash; После враппера вставляем ссылку "Показать еще"&ndash;&gt;
+            <div class="product__more">
+                <a class="product__more-link" href="#">Показать еще</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="banner">
+    <div class="container">
+        <a class="banner__link" href="#">
+            <img src="images/content/banner.jpg" alt="">
+        </a>
+    </div>
+</div>
+
+<section class="products page-section">
+    <div class="container">
+        <div class="products__inner">
+            <h3 class="product__title">
+                С этим товаром покупают
+            </h3>
+            &lt;!&ndash; Унифицируем все табы в проекте &ndash;&gt;
+            <div class="tabs-wrapper">
+                &lt;!&ndash; Добавим универсальные классы для табов products__tabs, products__tab,
+                     products__container, products__content, tabs-content&#45;&#45;active&ndash;&gt;
+                <div class="tabs products__tabs">
+                    <a class="tab products__tab tab&#45;&#45;active" href="#popular-tab1">запчасти</a>
+                    <a class="tab products__tab" href="#popular-tab2">моторы</a>
+                    <a class="tab products__tab" href="#popular-tab3">шины</a>
+                    <a class="tab products__tab" href="#popular-tab4">электроника</a>
+                    <a class="tab products__tab" href="#popular-tab5">инструменты</a>
+                    <a class="tab products__tab" href="#popular-tab6">аксессуары</a>
+                </div>
+                <div class="tabs-container products__container">
+                    &lt;!&ndash; В этих дивах будут слайдеры товаров &ndash;&gt;
+                    <div id="popular-tab1" class="tabs-content products__content tabs-content&#45;&#45;active">
+                        <div class="product-slider">
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper product-item__not-available">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper product-item__not-available">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper product-item__not-available">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper product-item__not-available">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="popular-tab2" class="tabs-content products__content">
+                        <div class="product-slider">
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper product-item__not-available">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper product-item__not-available">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper product-item__not-available">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-slider__item">
+                                &lt;!&ndash; Сделаем обертку для товара &ndash;&gt;
+                                <div class="product-item__wrapper product-item__not-available">
+                                    &lt;!&ndash; Выносим кнопки Избранное и Корзина за пределы <а> &ndash;&gt;
+                                    &lt;!&ndash; Кнопка-иконка Избранное &ndash;&gt;
+                                    <button class="product-item__favorite"></button>
+                                    &lt;!&ndash; Кнопка-иконка "Корзина" &ndash;&gt;
+                                    <button class="product-item__cart">
+                                        <img src="images/cart_empty_gray_20x20.png" alt="">
+                                    </button>
+                                    <a class="product-item__notify-link" href="#">
+                                        <span>Сообщить о поступлении</span>
+                                    </a>
+                                    <a class="product-item product-item&#45;&#45;sale" href="#">
+                                        &lt;!&ndash; Добавим ховер "Посмотреть товар" &ndash;&gt;
+                                        <p class="product-item__hover-text">
+                                            посмотреть товар
+                                        </p>
+                                        &lt;!&ndash; Картинка товара "рюкзака" &ndash;&gt;
+                                        <img class="product-item__img" src="images/content/product-1.png" alt="">
+                                        &lt;!&ndash; Название товара "рюкзак" &ndash;&gt;
+                                        <h4 class="product-item__title">
+                                            Водонепроницаемый рюкзак
+                                        </h4>
+                                        &lt;!&ndash; Цена товара &ndash;&gt;
+                                        <p class="price product-item__price">
+                                            9800
+                                        </p>
+                                        <p class="product-item__notify-text">
+                                            нет в наличии
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="popular-tab3" class="tabs-content products__content">slider-3</div>
+                    <div id="popular-tab4" class="tabs-content products__content">slider-4</div>
+                    <div id="popular-tab5" class="tabs-content products__content">slider-5</div>
+                    <div id="popular-tab6" class="tabs-content products__content">slider-6</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__top-inner">
+                <div class="footer__top-item footer__top-newsletter">
+                    <h6 class="footer__top-title">
+                        Подпишитесь на нашу рассылку
+                        и узнайте об акциях быстрее
+                    </h6>
+                    <form class="footer-form">
+                        <input class="footer-form__input" type="text" placeholder="Введите ваш e-mail:">
+                        <button class="footer-form__btn" type="submit">Отправить</button>
+                    </form>
+                </div>
+                <div class="footer__top-item">
+                    <h6 class="footer__top-title">
+                        Информация
+                    </h6>
+                    &lt;!&ndash; Код emit для ul: ul.footer-list>li.footer-list__item*4>a[href=#] &ndash;&gt;
+                    <ul class="footer-list">
+                        <li class="footer-list__item"><a href="#">О компании</a></li>
+                        <li class="footer-list__item"><a href="#">Контакты</a></li>
+                        <li class="footer-list__item"><a href="#">Акции</a></li>
+                        <li class="footer-list__item"><a href="#">Магазины</a></li>
+                    </ul>
+                </div>
+                <div class="footer__top-item">
+                    <h6 class="footer__top-title">
+                        Интернет-магазин
+                    </h6>
+                    <ul class="footer-list">
+                        <li class="footer-list__item"><a href="#">Доставка и самовывоз</a></li>
+                        <li class="footer-list__item"><a href="#">Оплата</a></li>
+                        <li class="footer-list__item"><a href="#">Возврат-обмен</a></li>
+                        <li class="footer-list__item"><a href="#">Новости</a></li>
+                    </ul>
+                </div>
+                <div class="footer__top-item footer__top-social">
+                    &lt;!&ndash; Код emit для ul: ul.social-list>li.social-list__item*4>a[href=#] &ndash;&gt;
+                    <ul class="social-list">
+                        <li class="social-list__item">
+                            <a href="#">
+                                <img src="images/instagram.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a href="#">
+                                <img src="images/vkontakte.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a href="#">
+                                <img src="images/facebook.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a href="#">
+                                <img src="images/youtube.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <a class="footer__bottom-link" href="#">
+                Договор оферты
+            </a>
+            <a class="footer__bottom-link" href="#">
+                Политика обработки персональных данных
+            </a>
+        </div>
+    </div>
+</footer>
+-->
+
+<!-- Подключаем jQuery, slickSlider -->
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/slick.min.js"></script>
+<!-- Подключаем RangeSlider и jQueryFormStyler -->
+<script src="js/ion.rangeSlider.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="js/jquery.rateyo.min.js"></script>
+<!-- main.js  идет последним -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
+
+
+<!-- Шаблон табов, хотя tabs-wrapper вроде бы не особо нужен-->
+<!-- <div class="tabs-wrapper">
+                <div class="tabs">
+                    <a class="tab tab--active"  href="#"></a>
+                </div>
+                <div class="tabs-container">
+                    <div class="tabs-content"></div>
+                </div>
+      </div> -->

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../BUUZA_Project/.idea/BUUZA_Project.iml" filepath="$PROJECT_DIR$/../BUUZA_Project/.idea/BUUZA_Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Internet_Shop_Project.iml" filepath="$PROJECT_DIR$/.idea/Internet_Shop_Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../learn-jsdoc/.idea/learn-jsdoc.iml" filepath="$PROJECT_DIR$/../learn-jsdoc/.idea/learn-jsdoc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../vue_learn/.idea/vue_learn.iml" filepath="$PROJECT_DIR$/../vue_learn/.idea/vue_learn.iml" />
+    </modules>
+  </component>
+</project>

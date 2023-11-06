@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="200px" height="200px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 200 200"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#313C42;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="cart_filled.svg">
+   <g>
+    <path class="fil0" d="M189.59 150.71l-120.6 0c-2.4,0 -4.47,-1.28 -5.59,-3.35 -1.11,-1.92 -1.11,-4.31 -0.16,-6.22l21.7 -20.9c1.28,-1.12 1.6,-2.87 0.96,-4.47l-46.58 -114.22c-0.64,-1.59 -2.08,-2.55 -3.67,-2.55l-33.66 0c-2.24,0 -3.99,1.75 -3.99,3.99 0,2.39 1.75,4.15 3.99,4.15l30.95 0 44.34 109.27 -20.1 19.3c-0.32,0.32 -0.48,0.48 -0.63,0.8 -2.72,4.63 -2.88,10.21 -0.16,14.84 2.55,4.62 7.33,7.49 12.6,7.49l120.6 0c2.23,0 3.99,-1.75 3.99,-3.98 0,-2.24 -1.76,-4.15 -3.99,-4.15z"/>
+    <ellipse class="fil0" cx="91.48" cy="183.89" rx="15.95" ry="16.11"/>
+    <ellipse class="fil0" cx="155.13" cy="183.89" rx="15.95" ry="16.11"/>
+    <path class="fil0" d="M94.03 116.89l72.11 0 32.86 -85.03 -138.63 0 32.87 80.88c0.47,1.44 0.63,2.71 0.79,4.15z"/>
+   </g>
+  </g>
+ </g>
+</svg>
